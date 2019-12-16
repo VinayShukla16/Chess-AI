@@ -23,4 +23,8 @@ class Queen extends ChessPieces{
     capture(){
         
     }
+
+    initializePiece(){
+        super.initializePiece();
+    }
 }

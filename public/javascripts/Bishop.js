@@ -23,4 +23,8 @@ class Bishop extends ChessPieces{
     capture(){
 
     }
+
+    initializePiece(){
+        super.initializePiece();
+    }
 }

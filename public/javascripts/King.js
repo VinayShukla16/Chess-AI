@@ -23,4 +23,8 @@ class King extends ChessPieces{
     capture(){
         
     }
+
+    initializePiece(){
+        super.initializePiece();
+    }
 }

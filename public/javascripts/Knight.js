@@ -23,4 +23,8 @@ class Knight extends ChessPieces{
     capture(){
         
     }
+
+    initializePiece(){
+        super.initializePiece();
+    }
 }

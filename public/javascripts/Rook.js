@@ -24,4 +24,8 @@ class Rook extends ChessPieces{
         
     }
 
+    initializePiece(){
+        super.initializePiece();
+    }
+
 }

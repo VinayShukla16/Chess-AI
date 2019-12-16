@@ -17,10 +17,18 @@ class Pawn extends ChessPieces{
     }
 
     moving(){
-
+        
     }
 
     capture(){
+    }
+
+    initializePiece(){
+        super.initializePiece();
+    }
+
+    stop(e){
         
     }
+
 }
