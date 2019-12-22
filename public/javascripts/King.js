@@ -27,4 +27,8 @@ class King extends ChessPieces{
     initializePiece(){
         super.initializePiece();
     }
+
+    adjustSquare(){
+        super.adjustSquare();
+    }
 }

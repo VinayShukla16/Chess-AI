@@ -14,10 +14,24 @@ class Pawn extends ChessPieces{
             this.image.style.top = this.yposition;
             this.image.style.position = 'absolute';
         }
+        this.firstMove = true;
     }
 
-    moving(){
-        
+    moving(x, y){
+        if(this.firstMove == true){
+            if((this.yposition === (y - 80)) || (this.yposition === (y - 160)) && (this.xposition === x)){
+                this.firstMove = false;
+                return true;
+            }else{
+                return false;
+            }
+        }else{
+            if(this.yposition == (y - 80) && this.xposition == x){
+                return true;
+            }else{
+                return false;
+            }
+        }
     }
 
     capture(){
@@ -27,8 +41,8 @@ class Pawn extends ChessPieces{
         super.initializePiece();
     }
 
-    stop(e){
-        
+    adjustSquare(){
+        super.adjustSquare();
     }
 
 }

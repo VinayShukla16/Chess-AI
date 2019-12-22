@@ -27,4 +27,8 @@ class Knight extends ChessPieces{
     initializePiece(){
         super.initializePiece();
     }
+
+    adjustSquare(){
+        super.adjustSquare();
+    }
 }

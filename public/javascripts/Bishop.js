@@ -27,4 +27,8 @@ class Bishop extends ChessPieces{
     initializePiece(){
         super.initializePiece();
     }
+
+    adjustSquare(){
+        super.adjustSquare();
+    }
 }

@@ -27,4 +27,8 @@ class Queen extends ChessPieces{
     initializePiece(){
         super.initializePiece();
     }
+
+    adjustSquare(){
+        super.adjustSquare();
+    }
 }
