@@ -7,11 +7,18 @@ class ChessPieces {
     }
 
     moving(x, y){
-
+        if(x < 145 || y < 65 || x > 705 || y > 625){
+            return false;
+        }else{
+            return true;
+        }
     }
     
     capture(){
-
+        var capturedPiece = document.elementFromPoint(this.xposition, this.yposition)
+        if(this.xposition == parseInt(capturedPiece.style.left)  && this.yposition  == parseInt(capturedPiece.style.top)){
+            capturedPiece.parentNode.removeChild(capturedPiece);
+        }
     }
 
     initializePiece(){
@@ -19,6 +26,8 @@ class ChessPieces {
         this.image.addEventListener("mousedown", e =>{
             if(moving == false){
                 moving = true;
+                var tempZIndex = this.image.style.zIndex
+                this.image.style.zIndex = "9999999999999999999999999999"
                 this.image.addEventListener("mousemove", e =>{
                     if(moving == true){
                         
@@ -32,17 +41,19 @@ class ChessPieces {
                 this.image.addEventListener("mouseup", e => {
                     if(moving == true){
                         moving = false;
+                        this.image.style.zIndex = tempZIndex
                         var currentXPosition = this.xposition;
                         var currentYPosition = this.yposition;
 
                         this.xposition = e.clientX -20;
                         this.yposition = e.clientY -20;
                         this.adjustSquare();
+                        
                         if(this.moving(currentXPosition, currentYPosition) == false){;
                             this.xposition = currentXPosition;
                             this.yposition = currentYPosition;
                         }
-                            
+                        this.capture();    
 
                         this.image.style.left = this.xposition;
                         this.image.style.top = this.yposition;
@@ -70,6 +81,14 @@ class ChessPieces {
             this.yposition = (parseInt((this.yposition-65)/80, 10)*80 + 65)
         }else{
             this.yposition = ((parseInt((this.yposition-65)/80, 10) + 1)*80 + 65)
+        }
+    }
+
+    findMax(num1, num2){
+        if(num1 < num2){
+            return num2;
+        }else{
+            return num1;
         }
     }
 }

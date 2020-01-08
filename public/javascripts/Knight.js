@@ -16,12 +16,29 @@ class Knight extends ChessPieces{
         }
     }
 
-    moving(){
+    moving(x, y){
+        if(!super.moving(x,y)){
+            return false
+        }
+        if((this.xposition - x)/80 == 1 || (this.xposition - x)/80 == -1){
+            return this.checkMovementOther(this.yposition, y);
+        }else if((this.yposition - y)/80 == 1 || (this.yposition - y)/80 == -1){
+            return this.checkMovementOther(this.xposition, x);
+        }else{
+            return false;
+        }
+    }
 
+    checkMovementOther(originalPosition, newPosition){
+        if((originalPosition- newPosition)/80 == 2 || (originalPosition- newPosition)/80 == -2){
+            return true;
+        }else{
+            return false;
+        }
     }
 
     capture(){
-        
+        super.capture()
     }
 
     initializePiece(){

@@ -16,12 +16,23 @@ class King extends ChessPieces{
         }
     }
 
-    moving(){
-
+    moving(x, y){
+        if(!super.moving(x,y)){
+            return false
+        }
+        if((((this.xposition - x)/80 == 1) || ((this.xposition - x)/80 == -1)) && ((this.yposition - y) == 0)){
+            return true;
+        }else if((((this.yposition - y)/80 == 1)) || (((this.yposition - y)/80 == -1) && (this.xposition - x) == 0)){
+            return true;
+        }else if((((this.xposition - x)/80 == 1) || ((this.xposition - x)/80 == -1)) && ((this.yposition - y) == 1 || (this.yposition  - y) == -1)){
+            return true;
+        }else{
+            return false
+        }
     }
 
     capture(){
-        
+        super.capture()
     }
 
     initializePiece(){

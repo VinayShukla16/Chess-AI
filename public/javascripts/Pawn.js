@@ -18,27 +18,49 @@ class Pawn extends ChessPieces{
     }
 
     moving(x, y){
-        if(this.firstMove == true){
-            if((this.yposition === (y - 80)) || (this.yposition === (y - 160)) && (this.xposition === x)){
-                this.firstMove = false;
-                return true;
+        if(!super.moving(x,y)){
+            return false
+        }
+        if(this.color == "white"){
+            if(this.firstMove == true){
+                if(((this.yposition == (y - 80)) || (this.yposition == (y - 160))) && (this.xposition == x)){
+                    this.firstMove = false;
+                    return true;
+                }else{
+                    return false;
+                }
             }else{
-                return false;
+                if((this.yposition == (y - 80) && this.xposition == x)){
+                    return true;
+                }else{
+                    return false;
+                }
             }
         }else{
-            if(this.yposition == (y - 80) && this.xposition == x){
-                return true;
+            if(this.firstMove == true){
+                if(((this.yposition == (y + 80)) || (this.yposition == (y + 160))) && (this.xposition == x)){
+                    this.firstMove = false;
+                    return true;
+                }else{
+                    return false;
+                }
             }else{
-                return false;
+                if(this.yposition == (y + 80) && this.xposition == x){
+                    return true;
+                }else{
+                    return false;
+                }
             }
         }
     }
 
     capture(){
+        super.capture()
     }
 
     initializePiece(){
         super.initializePiece();
+
     }
 
     adjustSquare(){

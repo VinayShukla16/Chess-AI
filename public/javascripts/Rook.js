@@ -16,12 +16,19 @@ class Rook extends ChessPieces{
         }
     }
 
-    moving(){
-
+    moving(x, y){
+        if(!super.moving(x,y)){
+            return false
+        }
+        if(this.xposition == x || this.yposition == y){
+            return true;
+        }else{
+            return false;
+        }
     }
 
     capture(){
-        
+        super.capture()
     }
 
     initializePiece(){
