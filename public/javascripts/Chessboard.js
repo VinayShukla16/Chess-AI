@@ -57,103 +57,139 @@ function determineLetter(letter){
 }
 
 function createPieces(){
-
-    var whitePawn1 = new Pawn("white", 145, 545);
+    var arrayOfWhitePieces =  []
+    var  arrayOfBlackPieces =[]
+    var whitePawn1 = new Pawn("white", 145, 545, true);
     document.body.appendChild(whitePawn1.image);
     whitePawn1.initializePiece();
-    var whitePawn2 = new Pawn("white", 225, 545);
+    arrayOfWhitePieces.push(whitePawn1)
+    var whitePawn2 = new Pawn("white", 225, 545, true);
     document.body.appendChild(whitePawn2.image);
     whitePawn2.initializePiece();
-    var whitePawn3 = new Pawn("white", 305, 545);
+    arrayOfWhitePieces.push(whitePawn2)
+    var whitePawn3 = new Pawn("white", 305, 545, true);
     document.body.appendChild(whitePawn3.image);
     whitePawn3.initializePiece();
-    var whitePawn4 = new Pawn("white", 385, 545);
+    arrayOfWhitePieces.push(whitePawn3)
+    var whitePawn4 = new Pawn("white", 385, 545, true);
     document.body.appendChild(whitePawn4.image);
     whitePawn4.initializePiece();
-    var whitePawn5 = new Pawn("white", 465, 545);
+    arrayOfWhitePieces.push(whitePawn4)
+    var whitePawn5 = new Pawn("white", 465, 545, true);
     document.body.appendChild(whitePawn5.image);
     whitePawn5.initializePiece();
-    var whitePawn6 = new Pawn("white", 545, 545);
+    arrayOfWhitePieces.push(whitePawn5)
+    var whitePawn6 = new Pawn("white", 545, 545, true);
     document.body.appendChild(whitePawn6.image);
     whitePawn6.initializePiece();
-    var whitePawn7 = new Pawn("white", 625, 545);
+    arrayOfWhitePieces.push(whitePawn6)
+    var whitePawn7 = new Pawn("white", 625, 545, true);
     document.body.appendChild(whitePawn7.image);
     whitePawn7.initializePiece();
-    var whitePawn8 = new Pawn("white", 705, 545);
+    arrayOfWhitePieces.push(whitePawn7)
+    var whitePawn8 = new Pawn("white", 705, 545, true);
     document.body.appendChild(whitePawn8.image);
     whitePawn8.initializePiece();
+    arrayOfWhitePieces.push(whitePawn8)
 
-    var whiteKnight1 = new Knight("white", 225, 625);
+    var whiteKnight1 = new Knight("white", 225, 625, true);
     document.body.appendChild(whiteKnight1.image);
     whiteKnight1.initializePiece();
-    var whiteKnight2 = new Knight("white", 625, 625);
+    arrayOfWhitePieces.push(whiteKnight1)
+    var whiteKnight2 = new Knight("white", 625, 625, true);
     document.body.appendChild(whiteKnight2.image);
     whiteKnight2.initializePiece();
-    var whiteBishop1 = new Bishop("white", 305, 625);
+    arrayOfWhitePieces.push(whiteKnight2)
+    var whiteBishop1 = new Bishop("white", 305, 625, true);
     document.body.appendChild(whiteBishop1.image);
     whiteBishop1.initializePiece();
-    var whiteBishop2 = new Bishop("white", 545, 625);
+    arrayOfWhitePieces.push(whiteBishop1)
+    var whiteBishop2 = new Bishop("white", 545, 625, true);
     document.body.appendChild(whiteBishop2.image);
     whiteBishop2.initializePiece();
-    var whiteRook1 = new Rook("white", 145, 625);
+    arrayOfWhitePieces.push(whiteBishop2)
+    var whiteRook1 = new Rook("white", 145, 625, true);
     document.body.appendChild(whiteRook1.image);
     whiteRook1.initializePiece();
-    var whiteRook2 = new Rook("white", 705, 625);
+    arrayOfWhitePieces.push(whiteRook1)
+    var whiteRook2 = new Rook("white", 705, 625, true);
     document.body.appendChild(whiteRook2.image);
     whiteRook2.initializePiece();
-    var whiteKing = new King("white", 465, 625);
+    arrayOfWhitePieces.push(whiteRook2)
+    var whiteKing = new King("white", 465, 625,true);
     document.body.appendChild(whiteKing.image);
     whiteKing.initializePiece();
-    var whiteQueen = new Queen("white", 385, 625);
+    arrayOfWhitePieces.push(whiteKing)
+    var whiteQueen = new Queen("white", 385, 625, true);
     document.body.appendChild(whiteQueen.image);
     whiteQueen.initializePiece();
+    arrayOfWhitePieces.push(whiteQueen)
 
-    var blackPawn1 = new Pawn("black", 145, 145);
+    var blackPawn1 = new Pawn("black", 145, 145, false);
     document.body.appendChild(blackPawn1.image);
     blackPawn1.initializePiece();
-    var blackPawn2 = new Pawn("black", 225, 145);
+    arrayOfBlackPieces.push(blackPawn1)
+    var blackPawn2 = new Pawn("black", 225, 145, false);
     document.body.appendChild(blackPawn2.image);
     blackPawn2.initializePiece();
-    var blackPawn3 = new Pawn("black", 305, 145);
+    arrayOfBlackPieces.push(blackPawn2)
+    var blackPawn3 = new Pawn("black", 305, 145, false);
     document.body.appendChild(blackPawn3.image);
     blackPawn3.initializePiece();
-    var blackPawn4 = new Pawn("black", 385, 145);
+    arrayOfBlackPieces.push(blackPawn3)
+    var blackPawn4 = new Pawn("black", 385, 145, false);
     document.body.appendChild(blackPawn4.image);
     blackPawn4.initializePiece();
-    var blackPawn5 = new Pawn("black", 465, 145);
+    arrayOfBlackPieces.push(blackPawn4)
+    var blackPawn5 = new Pawn("black", 465, 145, false);
     document.body.appendChild(blackPawn5.image);
     blackPawn5.initializePiece();
-    var blackPawn6 = new Pawn("black", 545, 145);
+    arrayOfBlackPieces.push(blackPawn5)
+    var blackPawn6 = new Pawn("black", 545, 145, false);
     document.body.appendChild(blackPawn6.image);
     blackPawn6.initializePiece();
-    var blackPawn7 = new Pawn("black", 625, 145);
+    arrayOfBlackPieces.push(blackPawn6)
+    var blackPawn7 = new Pawn("black", 625, 145, false);
     document.body.appendChild(blackPawn7.image);
     blackPawn7.initializePiece();
-    var blackPawn8 = new Pawn("black", 705, 145);
+    arrayOfBlackPieces.push(blackPawn7)
+    var blackPawn8 = new Pawn("black", 705, 145, false);
     document.body.appendChild(blackPawn8.image);
     blackPawn8.initializePiece();
-    var blackKnight1 = new Knight("black", 225, 65);
+    arrayOfBlackPieces.push(blackPawn8)
+    var blackKnight1 = new Knight("black", 225, 65, false);
     document.body.appendChild(blackKnight1.image);
     blackKnight1.initializePiece();
-    var blackKnight2 = new Knight("black", 625, 65);
+    arrayOfBlackPieces.push(blackKnight1)
+    var blackKnight2 = new Knight("black", 625, 65, false);
     document.body.appendChild(blackKnight2.image);
     blackKnight2.initializePiece();
-    var blackBishop1 = new Bishop("black", 305, 65);
+    arrayOfBlackPieces.push(blackKnight2)
+    var blackBishop1 = new Bishop("black", 305, 65, false);
     document.body.appendChild(blackBishop1.image);
     blackBishop1.initializePiece();
-    var blackBishop2 = new Bishop("black", 545, 65);
+    arrayOfBlackPieces.push(blackBishop1)
+    var blackBishop2 = new Bishop("black", 545, 65, false);
     document.body.appendChild(blackBishop2.image);
     blackBishop2.initializePiece();
-    var blackRook1 = new Rook("black", 145, 65);
+    arrayOfBlackPieces.push(blackBishop2)
+    var blackRook1 = new Rook("black", 145, 65, false);
     document.body.appendChild(blackRook1.image);
     blackRook1.initializePiece();
-    var blackRook2 = new Rook("black", 705, 65);
+    arrayOfBlackPieces.push(blackRook1)
+    var blackRook2 = new Rook("black", 705, 65, false);
     document.body.appendChild(blackRook2.image);
     blackRook2.initializePiece();
-    var blackKing = new King("black", 465, 65);
+    arrayOfBlackPieces.push(blackRook2)
+    var blackKing = new King("black", 465, 65, false);
     document.body.appendChild(blackKing.image);
     blackKing.initializePiece();
-    var blackQueen = new Queen("black", 385, 65);
+    arrayOfBlackPieces.push(blackKing)
+    var blackQueen = new Queen("black", 385, 65, false);
     document.body.appendChild(blackQueen.image);
     blackQueen.initializePiece();
+    arrayOfBlackPieces.push(blackQueen);
+    
+    startGame(arrayOfWhitePieces, arrayOfBlackPieces);
+
 }

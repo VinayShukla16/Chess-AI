@@ -1,18 +1,20 @@
 class Bishop extends ChessPieces{
-    constructor(color, xposition, yposition){
-        super(color, xposition, yposition);
+    constructor(color, xposition, yposition, canMove){
+        super(color, xposition, yposition, canMove);
         if(this.color == "white"){
             this.image = new Image(60, 60);
             this.image.src = "/images/WhiteBishop.png";
             this.image.style.left = this.xposition;
             this.image.style.top = this.yposition;
             this.image.style.position = 'absolute';
+            this.image.className = "white"
         }else{
             this.image = new Image(60, 60);
             this.image.src = "/images/BlackBishop.png";
             this.image.style.left = this.xposition;
             this.image.style.top = this.yposition;
             this.image.style.position = 'absolute';
+            this.image.className = "black"
         }
     }
 
